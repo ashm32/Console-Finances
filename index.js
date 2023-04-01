@@ -120,3 +120,16 @@ for (var i = 0; i < finances.length; i++) { //iterates through the finance array
   }
 }
 
+//console.log(netChangeSum); , used to check if the following worked correctly.
+average = Math.round(netChangeSum / (finances.length - 1)); // works out the average profit inc/dec
+
+analysis = // creates a variable which when called will display all the required analysis
+  'Financial Analysis ' + '\n' +
+  '----------------' + '\n' +
+  'Total Months: ' + months + '\n' +
+  'Total: $' + total + '\n' +
+  'Average Change: ' + average + '\n' +
+  'Greatest Increase in Profits/Losses: ' + greatest[0] + ' ($' + greatest[1] + ')\n' + //greatest[0] =  year , greatest[1] = profit inc/dec from that year (compared to next year)
+  'Greatest Decrease in Profits/Losses: ' + least[0] + ' ($' + least[1] + ')';  //least[0] =  year , least[1] = profit inc/dec from that year (compared to next year)
+
+console.log(analysis); //displays all the required analysis
