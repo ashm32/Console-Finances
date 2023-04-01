@@ -100,3 +100,23 @@ var greatest = ['', 0]; // largest profit inc/dec
 var currentMonth;
 var date;
 var amount;
+
+// finds the greatest profit increase (inc) and profit decrease (dec)
+for (var i = 0; i < finances.length; i++) { //iterates through the finance array until it reaches the end
+  currentMonth = finances[i]; // starts from the beginning when i=0
+  date = currentMonth[0]; // date will be from beginning when i=0
+  amount = currentMonth[1]; // to work out profit inc/dec it sets the amount to the following month
+  total += amount; // adds the total to the amount to get the total amount
+  if (i > 0) change = amount - previousAmount; // works out the profit inc/dec, for i=0 there is no profit inc/dec (because it's the starting value) therefore condition is for when i>0
+  previousAmount = amount; // updates the current index amount (previousAmount) with the following index amount (amount) 
+  netChangeSum += change; // adds the profit inc/dec (change) to store the total change (netChangeSum)
+
+  if (change > greatest[1]) { // if the change was the largest profit inc/dec then store it as the greatest (so we can keep comparing)
+    greatest = [date, change]; //stores the largest profit inc/dec by the date and how much it inc/dec by
+  }
+
+  if (change < least[1]) { // if the change was the smallest profit inc/dec then store it as the least (so we can keep comparing)
+    least = [date, change]; //stores the smallest profit inc/dec by the date and how much it inc/dec by
+  }
+}
+
