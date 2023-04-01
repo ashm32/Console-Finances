@@ -121,7 +121,7 @@ for (var i = 0; i < finances.length; i++) { //iterates through the finance array
 }
 
 //console.log(netChangeSum); , used to check if the following worked correctly.
-average = Math.round(netChangeSum / (finances.length - 1)); // works out the average profit inc/dec
+average = Math.round((netChangeSum / (finances.length - 1)) * 100) / 100; // money format = $xx.yy, ($dollars.cents) by first *100 you make the value $xxyy, then it rounds this as an integer then /100 to get back into money format. If we didn't *100 then the format would be $xx and not accurate to the nearest cent.
 
 analysis = // creates a variable which when called will display all the required analysis
   'Financial Analysis ' + '\n' +
