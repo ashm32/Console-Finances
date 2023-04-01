@@ -86,3 +86,17 @@ var finances = [
   ['Jan-2017', 138230],
   ['Feb-2017', 671099],
 ];
+
+// declares / initialses the variables
+var months = finances.length; //total items in array = total number of months 
+var total = 0;
+var change = 0;
+var average;
+var analysis;
+var previousAmount = 0;
+var netChangeSum = 0;
+var least = ['', 9999999999999]; // smallest profit inc/dec
+var greatest = ['', 0]; // largest profit inc/dec
+var currentMonth;
+var date;
+var amount;
