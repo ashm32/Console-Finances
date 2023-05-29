@@ -1,5 +1,5 @@
 # Console-Finances
-Live URL: https://github.com/ashm32/Console-Finances
+Live URL: [https://github.com/ashm32/Console-Finances](https://ashm32.github.io/Console-Finances/)
 
 With the given a dataset, composed of arrays with two fields, Date and Profit/Losses, I have written JavaScript code that analyzes the records to calculate each of the following:
 
